@@ -569,6 +569,9 @@ body {
   border-radius: 4rem;
   margin-left: 1.875rem;
   margin-right: 1.875rem;
+  -webkit-transition-duration: 0.5s;
+       -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 .s1-content__btn:hover {
@@ -577,9 +580,6 @@ body {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
-  -webkit-transition-duration: 0.5s;
-       -o-transition-duration: 0.5s;
-          transition-duration: 0.5s;
 }
 
 .s1-header {
@@ -620,6 +620,9 @@ body {
   color: #3f3f3f;
   text-decoration: none;
   padding: 0.5rem 0.5rem;
+  -webkit-transition-duration: 0.5s;
+       -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 .s1-header__link:hover {
@@ -627,9 +630,6 @@ body {
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
-  -webkit-transition-duration: 0.5s;
-       -o-transition-duration: 0.5s;
-          transition-duration: 0.5s;
 }
 
 .s2-body {
@@ -813,69 +813,4 @@ body {
 
 .card:hover .card__img_development {
   background-image: url("../media/development-gold.png");
-}
-
-.s4-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.s4-content {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  max-width: 1200px;
-  min-height: 100vh;
-  padding: 15px;
-}
-
-.s4-card {
-  width: calc(50% - 15px);
-  padding: 3.75rem 15px;
-  border: 10px solid #e6b446;
-}
-
-.s4-card__title {
-  margin: 0;
-  margin-bottom: 3.75rem;
-  font-family: "OpenSans", sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #e6b446;
-}
-
-.s4-card__text {
-  margin: 0;
-  font-family: "Merriweather", serif;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #3f3f3f;
-}
-
-.video-bg {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-}
-
-.video-bg__container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
 }

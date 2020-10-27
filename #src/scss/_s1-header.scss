@@ -73,11 +73,11 @@
 		border-radius: 4rem;
 		margin-left: 1.875rem;
 		margin-right: 1.875rem;
+		transition-duration: 0.5s;
 		&:hover {
 			color: $sand;
 			border-color: $sand;
 			transform: scale(1.1);
-			transition-duration: 0.5s;
 		}
 	}
 }
@@ -110,10 +110,10 @@
 		color: $d-grey;
 		text-decoration: none;
 		padding: 0.5rem 0.5rem;
+		transition-duration: 0.5s;
 		&:hover {
 			color: $gold;
 			transform: scale(1.2);
-			transition-duration: 0.5s;
 		}
 	}
 }
