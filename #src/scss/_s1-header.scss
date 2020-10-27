@@ -1,0 +1,119 @@
+.s1 {
+	position: relative;
+	min-height: 100vh;
+}
+
+.fullscreen-bg {
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	&__container {
+		position: relative;
+		overflow: hidden;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	&__image {
+		@include responsive-image;
+	}
+}
+
+.s1-body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	.s1-content {
+		align-self: center;
+		flex-grow: 1;
+	}
+}
+
+.s1-content {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	max-width: 1200px;
+	padding: 0 15px;
+	&__heading {
+		font-family: $os-font;
+		font-size: 5.625rem;
+		font-weight: 800;
+		color: $sand;
+		text-align: center;
+		text-transform: uppercase;
+		margin: 0 0 3rem;
+	}
+	&__text {
+		font-family: $mw-font;
+		font-size: 1.5rem;
+		font-weight: 400;
+		color: $bronze;
+		text-align: center;
+		margin: 0 0 3rem;
+	}
+	&__buttons {
+		display: flex;
+	}
+	&__btn {
+		width: 12.5rem;
+		height: 3.75rem;
+		line-height: 3.75rem;
+		overflow: hidden;
+		font-family: $os-font;
+		font-size: 1.125rem;
+		font-weight: 600;
+		color: $bronze;
+		text-align: center;
+		text-transform: uppercase;
+		text-decoration: none;
+		border: 2px solid $bronze;
+		border-radius: 4rem;
+		margin-left: 1.875rem;
+		margin-right: 1.875rem;
+		&:hover {
+			color: $sand;
+			border-color: $sand;
+			transform: scale(1.1);
+			transition-duration: 0.5s;
+		}
+	}
+}
+
+.s1-header {
+	position: absolute;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 15px;
+	padding: 0 15px;
+	&__logo {
+		display: block;
+	}
+	&__burger {}
+	&__menu {}
+	&__list {
+		list-style: none;
+		display: flex;
+		margin: 0;
+		padding: 0;
+	}
+	&__link {
+		display: block;
+		font-family: $mw-font;
+		font-size: 1.5rem;
+		font-weight: 400;
+		color: $d-grey;
+		text-decoration: none;
+		padding: 0.5rem 0.5rem;
+		&:hover {
+			color: $gold;
+			transform: scale(1.2);
+			transition-duration: 0.5s;
+		}
+	}
+}

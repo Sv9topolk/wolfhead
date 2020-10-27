@@ -1,0 +1,80 @@
+.s3-services {
+	position: relative;
+	min-height: 100vh;
+}
+
+.s3__content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.s3-servisecard {
+	flex: 0 1 auto;
+	width: calc(50% - 15px);
+	margin-top: 30px;
+}
+
+.card {
+	position: relative;
+	&__heading {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 60%;
+		background-color: #fff;
+		border: 5px solid $d-grey;
+		padding: 1.25rem;
+	}
+	&__img {
+		width: 7.5rem;
+		height: 6.25rem;
+		margin-bottom: 1.875rem;
+		background-position: center center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		&_branding {background-image: url("../media/branding-d-grey.png");}
+		&_consulting {background-image: url("../media/consulting-d-grey.png");}
+		&_design {background-image: url("../media/design-d-grey.png");}
+		&_development {background-image: url("../media/development-d-grey.png");}
+	}
+	&__title {
+		font-family: $os-font;
+		font-size: 1.875rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $d-grey;
+		text-align: center;
+		margin: 0;
+	}
+	&__text-container {
+		margin-top: 6.25rem;
+		padding-top: 8.125rem ;
+		padding-bottom: 1.875rem;
+		padding-left: 1.875rem;
+		padding-right: 1.875rem;
+		background-color: $l-grey;
+	}
+	&__text {
+		margin: 0;
+		font-family: $mw-font;
+		font-size: 1rem;
+		font-weight: 400;
+		color: $d-grey;
+	}
+}
+
+.card:hover {
+	.card__heading {border-color: $gold;}
+	.card__title {color: $gold;}
+	.card__img_branding {background-image: url("../media/branding-gold.png");}
+	.card__img_consulting {background-image: url("../media/consulting-gold.png");}
+	.card__img_design {background-image: url("../media/design-gold.png");}
+	.card__img_development {background-image: url("../media/development-gold.png");}
+}

@@ -1,0 +1,37 @@
+// Colors
+$sand:   rgb(245,240,160);
+$gold:   rgb(230,180,70);
+$bronze: rgb(140,110,40);
+$l-grey: rgb(242,242,242);
+$m-grey: rgb(153,153,153);
+$d-grey: rgb(63,63,63);
+
+// Fonts
+$os-font: "OpenSans", sans-serif;
+$mw-font: "Merriweather", serif;
+
+// Mixins
+@mixin responsive-image {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: $mw-font;
+	font-size: 16px;
+	color: $d-grey;
+}
+
+.body-wrapper {
+	display: flex;
+	flex-flow: column nowrap;
+	min-height: 100vh;
+	margin: 0 auto;
+}
