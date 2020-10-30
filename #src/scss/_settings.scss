@@ -1,4 +1,4 @@
-// Colors
+// ! Colors
 $sand:   rgb(245,240,160);
 $gold:   rgb(230,180,70);
 $bronze: rgb(140,110,40);
@@ -6,11 +6,11 @@ $l-grey: rgb(242,242,242);
 $m-grey: rgb(153,153,153);
 $d-grey: rgb(63,63,63);
 
-// Fonts
+// ! Fonts
 $os-font: "OpenSans", sans-serif;
 $mw-font: "Merriweather", serif;
 
-// Mixins
+// ! Mixins
 @mixin responsive-image {
 	position: absolute;
 	top: 50%;
@@ -21,17 +21,116 @@ $mw-font: "Merriweather", serif;
 	object-fit: cover;
 }
 
+// ! General styles
 html,
 body {
 	height: 100%;
 	font-family: $mw-font;
-	font-size: 16px;
 	color: $d-grey;
+	// M & P size by rem
+	font-size: 20px;
 }
 
-.body-wrapper {
-	display: flex;
-	flex-flow: column nowrap;
-	min-height: 100vh;
+* {box-sizing: border-box;}
+
+// Main blocks
+.section {
+	position: relative;
+	padding: 7.5rem 0;
+	&--grey {
+		background-color: $l-grey;
+		padding-top: 4.5rem;
+		padding-bottom: 4.5rem;
+	}
+}
+
+.container {
+	position: relative;
+	max-width: 1200px;
 	margin: 0 auto;
+	padding: 0 15px;
+}
+
+// Secondary blocks
+.card {
+	padding-left:  1.5rem;
+	padding-right: 1.5rem;
+	border: 10px solid $gold;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+.card--6col {
+	width: calc(50% - 15px);
+}
+
+.card--5col {
+	width: calc(41.67% - 15px);
+}
+
+// Headings & text content
+h1,
+h2,
+h3 {
+	font-family: $os-font;
+	text-transform: uppercase;
+}
+
+h1 {
+	margin: 0 0 3rem;
+	font-size: 4.5rem;
+	font-weight: 800;
+	color: $sand;
+	text-align: center;
+}
+
+h2 {
+	margin: 0 0 3rem;
+	font-size: 2.4rem;
+	font-weight: 700;
+	color: $gold;
+	line-height: 3rem;
+	text-align: left;
+}
+
+h3 {
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: $d-grey;
+	text-align: center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.btn {
+	display: block;
+	width: 10rem;
+	height: 3rem;
+	padding: 0;
+	margin: 0;
+
+	font-family: $os-font;
+	font-weight: 600;
+	font-size: 1rem;
+	color: $bronze;
+	line-height: calc(3rem - 4px);
+	text-align: center;
+	white-space: nowrap;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-overflow: ellipsis;
+
+	border: 2px solid $bronze;
+	border-radius: 3rem;
+	background-color: transparent;
+	transition: 1s;
+}
+
+.card-text {
+	display: block;
+	margin: 0;
+	font-size: 0.8rem;
+	line-height: 1.6rem;
+	font-weight: 400;
 }

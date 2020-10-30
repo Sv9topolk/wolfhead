@@ -1,42 +1,70 @@
-.s2-body {
-	display: flex;
-	justify-content: center;
-}
-
-.s2-content {
-	position: relative;
+// Section 2, part 1
+.s2-header {
 	display: flex;
 	justify-content: flex-start;
-	align-items: center;
-	box-sizing: border-box;
-	max-width: 1200px;
-	min-height: 100vh;
-	padding: 15px;
+	&__bg-image {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		z-index: -1;
+		padding-left: 73.8%;
+
+		background-image: url("../media/s2-bgi.jpg");
+		background-size: cover;
+		background-position: center right;
+	}
 }
 
-.s2-card {
-	width: calc(50% - 15px);
-	padding: 3.75rem 15px;
-	border: 10px solid $gold;
-	&__title {
-		margin: 0;
-		margin-bottom: 3.75rem;
-		font-family: $os-font;
-		font-size: 3rem;
-		font-weight: 700;
-		text-transform: uppercase;
+// Section 2, part 2
+.s2-services {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.s2-servicecard {
+	position: relative;
+	flex-grow: 0;
+	flex-basis: calc(50% - 15px);
+	&__heading {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 5;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 60%;
+		background-color: #fff;
+		border: 5px solid $d-grey;
+		padding: 1rem;
+	}
+	&__image {
+		height: 5rem;
+		margin-bottom: 1.5rem;
+		text-align: center;
+		fill: $d-grey;
+	}
+
+	&__text-container {
+		margin-top: 5.35rem;
+		padding-top: 6.5rem ;
+		padding-bottom: 1.5rem;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+		background-color: $l-grey;
+	}
+}
+
+.s2-servicecard:hover {
+	.s2-servicecard__heading {
+		border-color: $gold;
+	}
+	.s2-servicecard__title {
 		color: $gold;
 	}
-	&__text {
-		margin: 0;
-		font-family: $mw-font;
-		font-size: 1rem;
-		font-weight: 400;
-		color: $d-grey;
+	.s2-servicecard__image {
+		fill: $gold;
 	}
-}
-
-.s2-bg {
-	right: 0;
-	width: 80%;
 }

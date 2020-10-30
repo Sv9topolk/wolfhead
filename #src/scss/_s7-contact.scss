@@ -1,0 +1,104 @@
+.s7 {
+	display: flex;
+	justify-content: space-between;
+}
+
+.s7-card {
+	flex-shrink: 0;
+	order: 4;
+	&__text {
+		padding-bottom: 2.5rem;
+	}
+	&__socials {
+		display: flex;
+	}
+	&__soc-icon {
+		display: block;
+		height: 1.5rem;
+		margin-right: 1rem;
+		padding: 3px;
+		text-align: center;
+
+		& svg {
+			height: 100%;
+			fill: $m-grey;
+			transition: 0.5s;
+		}
+		&:hover svg {
+			fill: $bronze;
+		}
+	}
+}
+
+.form {
+	width: calc(50% - 15px);
+	display: flex;
+	justify-content: space-between;
+	align-content: space-between;
+	flex-wrap: wrap;
+	flex-shrink: 0;
+	order: 2;
+
+	&__title {
+		flex-basis: 100%;
+		margin: 0 0 3rem;
+		font-family: $os-font;
+		font-weight: 300;
+		font-size: 1.8rem;
+		line-height: 1.6rem;
+		text-transform: capitalize;
+		color: $bronze;
+	}
+
+	&__input {
+		width: 47%;
+		height: 2rem;
+		margin-bottom: 1.5rem;
+		padding: 0;
+
+		font-family: $mw-font;
+		font-size: 1rem;
+		font-weight: 300;
+		font-style: italic;
+		color: $d-grey;
+
+		background-color: transparent;
+		border: none;
+		border-bottom: 2px solid $bronze;
+		transition: 0.5s;
+
+		&:focus {
+			outline: none;
+			border-bottom: 2px solid $gold;
+		}
+		&::placeholder {
+			font-family: $mw-font;
+			font-size: 0.8rem;
+			font-weight: 300;
+			font-style: italic;
+			color: $m-grey;
+			text-transform: capitalize;
+		}
+	}
+
+	&__input--textfield {
+		flex-basis: 100%;
+		min-height: 5rem;
+		margin-top: 0.5rem;
+		margin-bottom: 1.5rem;
+		padding: 0;
+		resize: none;
+	}
+
+	&__btn {
+		&:focus {
+			outline: none;
+		}
+		
+		&:hover {
+			color: $gold;
+			border-color: $gold;
+			transform: scale(1.1);
+		}
+	}
+}

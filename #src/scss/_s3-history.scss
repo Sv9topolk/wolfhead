@@ -1,0 +1,21 @@
+// ! С видео повозиться надо
+
+.s3 {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	&__bg-video {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		z-index: -1;
+		padding-left: 73.8%;
+		overflow: hidden;
+
+		& video {
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
