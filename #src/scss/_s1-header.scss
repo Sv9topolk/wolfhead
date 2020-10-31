@@ -10,6 +10,16 @@
 }
 
 // ! Стили для меню
+.header {
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 5;
+
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
 
 .s1 {
 	display: flex;
