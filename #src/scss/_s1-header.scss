@@ -48,3 +48,15 @@
 		}
 	}
 }
+
+// Mobile version
+@media all and (max-width: 768px) {
+	.s1 {
+		&__btn-container {
+			flex-direction: column;
+			&:first-child {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}

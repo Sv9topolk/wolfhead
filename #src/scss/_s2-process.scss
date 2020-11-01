@@ -75,6 +75,10 @@
 
 // Phone version
 @media all and (max-width: 768px) {
+	.s2-header__bg-image {
+		opacity: 0.5;
+	}
+
 	.s2-servicecard {
 		flex-basis: 100%;
 
@@ -95,7 +99,4 @@
 			padding-top: 55px;
 		}
 	}
-
-
-	
 }

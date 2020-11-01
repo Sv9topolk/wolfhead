@@ -26,12 +26,23 @@
 		top: 0;
 		bottom: 0;
 		left: 0;
+		right: 25%;
 		z-index: -1;
-		padding-left: 73.8%;
 		overflow: hidden;
+		opacity: 0.8;
 
 		background-image: url("../media/s3-video-poster.jpg");
 		background-size: cover;
 		background-position: center center;
+
+		display: none;
+	}
+}
+
+// Mobile version
+@media all and (max-width: 768px) {
+	.s3 {
+		&__bg-video {display: none;}
+		&__bg-image {display: block;}
 	}
 }

@@ -76,7 +76,7 @@
 // Mobile version
 @media all and (max-width: 768px) {
 	.s4 {
-		grid-template-rows: auto 17.5rem 14.5rem 14.5rem 17.5rem;
+		grid-template-rows: auto calc(25vh - 10px) calc(25vh - 10px) calc(25vh - 10px) calc(25vh - 10px);
 		gap: 10px;
 	
 		grid-template-areas: "card card card card card card card card card card card .   "
@@ -91,6 +91,10 @@
 		&__project--2      {grid-area: pr-2;}
 		&__project--3      {grid-area: pr-3;}
 		&__project--4      {grid-area: pr-4;}
+	}
+
+	.s4__project--active {
+		border-width: 5px;
 	}
 }
 

@@ -108,5 +108,23 @@
 	.s7 {
 		flex-direction: column;
 	}
-	
+
+	.s7-card {
+		order: 1;
+		margin-bottom: 15px;
+		&__text {
+			padding-bottom: 15px;
+		}
+	}
+
+	.form {
+		order: 2;
+		width: 100%;
+		&__title {
+			margin-bottom: 15px;
+		}
+		&__input {
+			margin-bottom: 10px;
+		}
+	}
 }
