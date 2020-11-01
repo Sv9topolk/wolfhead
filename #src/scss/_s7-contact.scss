@@ -102,3 +102,11 @@
 		}
 	}
 }
+
+// Mobile version
+@media all and (max-width: 768px) {
+	.s7 {
+		flex-direction: column;
+	}
+	
+}

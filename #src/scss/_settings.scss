@@ -139,7 +139,7 @@ h3 {
 	font-weight: 400;
 }
 
-// Breakpoint 1 - max-width 1200px
+// Breakpoint 1 - max-width 1200px notebook
 @media all and (max-width: 1200px) {
 	html,
 	body {
@@ -150,6 +150,7 @@ h3 {
 	}
 }
 
+// Breakpoint 1 - max-width 992px tablet
 @media all and (max-width: 992px) {
 	html,
 	body {
@@ -160,3 +161,19 @@ h3 {
 	}
 }
 
+// Breakpoint 3 - max-width 768px phone
+@media all and (max-width: 768px) {
+	.card {
+		padding: 15px;
+	}
+
+	.card--6col,
+	.card--5col {
+		width: calc(91.33% - 30px);
+	}
+
+	h1,
+	h2, {
+		margin-bottom: 15px;
+	}
+}
