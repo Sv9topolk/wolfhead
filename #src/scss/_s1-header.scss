@@ -1,8 +1,7 @@
 .s1-fullscreen {
 	min-height: 100vh;
 	display: flex;
-	// ! увеличить паддинг на высоту хидера
-	padding: 2.5rem 0;
+	padding: 7rem 0;
 
 	background-image: url("../media/s1-bgi.jpg");
 	background-size: cover;
@@ -12,6 +11,7 @@
 // ! Стили для меню
 .header {
 	position: absolute;
+	top: 2.5rem;
 	left: 0;
 	right: 0;
 	z-index: 5;
@@ -28,30 +28,47 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		height: 3.5rem;
 	
 		padding-left: 15px;
 		padding-right: 15px;
 	}
 
 	&__logo {
+		position: absolute;
+		left: 50%;
+		z-index: 15;
+		transform: translateX(-50%);
+
 		display: block;
 		height: 3.5rem;
 		overflow: hidden;
+
+		transition-duration: 1s;
+		transition-timing-function: cubic-bezier(0.1, 0.8, 0.2, 1);
 		& img {
 			display: block;
 			height: 100%;
 		}
 	}
+
+	// ! Active desktop menu
+	&__logo--left {
+		left: 15px;
+		transform: translateX(0);
+		width: 4rem;
+	}
 }
 
 .menu {
 	position: absolute;
-
-	transition-duration: 1s;
-	transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 	right: 0;
 	transform: translateX(100%);
 
+	transition-duration: 1s;
+	transition-timing-function: cubic-bezier(0.1, 0.8, 0.2, 1);
+
+	// ! Active desktop menu
 	&--hide {
 		right: 55px;
 		transform: translateX(0);
@@ -70,7 +87,7 @@
 		
 		font-family: $os-font;
 		font-size: 1.5rem;
-		font-weight: 400;
+		font-weight: 600;
 		text-decoration: none;
 		color: $bronze;
 
@@ -92,6 +109,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 
 	&__icon {
 		position: relative;
@@ -121,6 +139,7 @@
 		transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
 	}
 
+	// ! Active desktop menu
 	&--active .burger__icon {
 		background-color: transparent;
 	}

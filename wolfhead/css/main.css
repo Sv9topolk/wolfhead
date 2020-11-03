@@ -569,7 +569,7 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 2.5rem 0;
+  padding: 7rem 0;
   background-image: url("../media/s1-bgi.jpg");
   background-size: cover;
   background-position: center bottom;
@@ -577,6 +577,7 @@ h3 {
 
 .header {
   position: absolute;
+  top: 2.5rem;
   left: 0;
   right: 0;
   z-index: 5;
@@ -598,14 +599,27 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 3.5rem;
   padding-left: 15px;
   padding-right: 15px;
 }
 
 .header__logo {
+  position: absolute;
+  left: 50%;
+  z-index: 15;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   display: block;
   height: 3.5rem;
   overflow: hidden;
+  -webkit-transition-duration: 1s;
+       -o-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 0.8, 0.2, 1);
+       -o-transition-timing-function: cubic-bezier(0.1, 0.8, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.1, 0.8, 0.2, 1);
 }
 
 .header__logo img {
@@ -613,18 +627,26 @@ h3 {
   height: 100%;
 }
 
+.header__logo--left {
+  left: 15px;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  width: 4rem;
+}
+
 .menu {
   position: absolute;
-  -webkit-transition-duration: 1s;
-       -o-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-       -o-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-          transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   right: 0;
   -webkit-transform: translateX(100%);
       -ms-transform: translateX(100%);
           transform: translateX(100%);
+  -webkit-transition-duration: 1s;
+       -o-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 0.8, 0.2, 1);
+       -o-transition-timing-function: cubic-bezier(0.1, 0.8, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.1, 0.8, 0.2, 1);
 }
 
 .menu--hide {
@@ -648,7 +670,7 @@ h3 {
   padding: 1rem 5px;
   font-family: "OpenSans", sans-serif;
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 600;
   text-decoration: none;
   color: #8c6e28;
   -webkit-transition: 0.5s;
@@ -674,6 +696,7 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .burger__icon {
