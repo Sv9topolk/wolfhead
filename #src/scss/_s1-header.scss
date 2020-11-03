@@ -15,12 +15,131 @@
 	left: 0;
 	right: 0;
 	z-index: 5;
+	overflow: hidden;
 
-	padding-left: 15px;
-	padding-right: 15px;
+	// Parent for absolute positioned header children
+	&__wrapper {
+		position: relative;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	&__logo {
+		display: block;
+		height: 3.5rem;
+		overflow: hidden;
+		& img {
+			display: block;
+			height: 100%;
+		}
+	}
+}
+
+.menu {
+	position: absolute;
+
+	transition-duration: 1s;
+	transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+	right: 0;
+	transform: translateX(100%);
+
+	&--hide {
+		right: 55px;
+		transform: translateX(0);
+	}
+
+	&__list {
+		display: flex;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__item a {
+		display: block;
+		padding: 1rem 5px;
+		
+		font-family: $os-font;
+		font-size: 1.5rem;
+		font-weight: 400;
+		text-decoration: none;
+		color: $bronze;
+
+		transition: 0.5s;
+		&:hover {
+			color: $sand;
+		}
+	}
 }
 
 
+// ----- Burger menu styles -----
+.burger {
+	position: absolute;
+	right: 15px;
+
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__icon {
+		position: relative;
+		width: 30px;
+		height: 5px;
+		background-color: $d-grey;
+		transition-delay: 0.2s;
+	}
+	&__icon::before {
+		position: absolute;
+		left: 0;
+		top: -10px;
+		content: '';
+		width: 30px;
+		height: 5px;
+		background-color: $d-grey;
+		transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+	}
+	&__icon::after {
+		position: absolute;
+		left: 0;
+		top: 10px;
+		content: '';
+		width: 30px;
+		height: 5px;
+		background-color: $d-grey;
+		transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+	}
+
+	&--active .burger__icon {
+		background-color: transparent;
+	}
+
+	&--active .burger__icon::before {
+		transform: rotate(45deg);
+		top: 0;
+		transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+	}
+
+	&--active .burger__icon::after {
+		transform: rotate(-45deg);
+		top: 0;
+		transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+	}
+}
+
+
+// ----- Header content styles ------
 .s1 {
 	display: flex;
 	flex-direction: column;
@@ -49,14 +168,12 @@
 	}
 }
 
-// Mobile version
+// ----- Mobile version -----
 @media all and (max-width: 768px) {
 	.s1 {
-		&__btn-container {
-			flex-direction: column;
-			&:first-child {
-				margin-bottom: 10px;
-			}
+		&__btn {
+			margin: 0;
+			&:first-child {margin-right: 10px;}
 		}
 	}
 }
