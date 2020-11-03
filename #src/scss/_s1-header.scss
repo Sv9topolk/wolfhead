@@ -6,6 +6,8 @@
 	background-image: url("../media/s1-bgi.jpg");
 	background-size: cover;
 	background-position: center bottom;
+
+	overflow: hidden;
 }
 
 // ! Стили для меню
@@ -15,7 +17,6 @@
 	left: 0;
 	right: 0;
 	z-index: 5;
-	overflow: hidden;
 
 	// Parent for absolute positioned header children
 	&__wrapper {
@@ -89,7 +90,7 @@
 		font-size: 1.5rem;
 		font-weight: 600;
 		text-decoration: none;
-		color: $bronze;
+		color: $gold;
 
 		transition: 0.5s;
 		&:hover {
@@ -143,13 +144,11 @@
 	&--active .burger__icon {
 		background-color: transparent;
 	}
-
 	&--active .burger__icon::before {
 		transform: rotate(45deg);
 		top: 0;
 		transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
 	}
-
 	&--active .burger__icon::after {
 		transform: rotate(-45deg);
 		top: 0;
@@ -182,7 +181,6 @@
 		&:hover {
 			color: $sand;
 			border-color: $sand;
-			transform: scale(1.1);
 		}
 	}
 }
@@ -190,9 +188,55 @@
 // ----- Mobile version -----
 @media all and (max-width: 768px) {
 	.s1 {
-		&__btn {
+			&__btn {
 			margin: 0;
 			&:first-child {margin-right: 10px;}
+		}
+	}
+
+	.header {
+		top: 15px;
+	}
+
+	.menu {
+		top: -15px;
+		left: 0;
+		right: 0;
+		height: 100vh;
+		background-color: $sand;
+	
+		&__list {
+			flex-direction: column;
+			padding-top: 60px;
+			text-align: center;
+		}
+
+		&__item {
+			position: relative;
+			& a {color: $bronze; font-size: 2rem;}
+		}
+
+		&__item::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			display: block;
+			width: 80%;
+			border: 2px solid $gold;
+			border-radius: 5px;
+
+			transform: translateX(-50%) scaleX(0.1);
+			transition: 1s;
+			transition-timing-function: cubic-bezier(0.1, 0.8, 0.2, 1);
+		}
+
+		&__item:hover {
+			& a {color: $gold;}
+			&::after {
+				border-color: $bronze;
+				transform: translateX(-50%) scale(1);
+			}
 		}
 	}
 }

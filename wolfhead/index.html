@@ -14,7 +14,7 @@
 
 <body>
 
-	<!-- ! Section 1 - heading -->
+	<!-- Section 1 - heading -->
 	<div class="section s1-fullscreen">
 		<header class="header">
 			<div class="header__wrapper">
@@ -23,12 +23,12 @@
 
 				<nav id="menu-hide" class="header__menu menu">
 					<ul class="menu__list">
-						<li class="menu__item"><a href="#">Services</a></li>
-						<li class="menu__item"><a href="#">History</a></li>
-						<li class="menu__item"><a href="#">Portfolio</a></li>
+						<li class="menu__item"><a href="#services">Services</a></li>
+						<li class="menu__item"><a href="#history">History</a></li>
+						<li class="menu__item"><a href="#portfolio">Portfolio</a></li>
 						<li class="menu__item"><a href="#">Team</a></li>
-						<li class="menu__item"><a href="#">Reviews</a></li>
-						<li class="menu__item"><a href="#">Contacts</a></li>
+						<li class="menu__item"><a href="#reviews">Reviews</a></li>
+						<li class="menu__item"><a href="#contacts">Contacts</a></li>
 					</ul>
 				</nav>
 
@@ -52,7 +52,7 @@
 	</div>
 
 	<!-- Section 2 - services (2 parts) -->
-	<section>
+	<section id="services">
 		<div class="section">
 			<!-- S2 content -->
 			<div class="container s2-header">
@@ -143,7 +143,7 @@
 	</section>
 
 	<!-- ! Section 3 - history доделать видео и контрол -->
-	<section class="section">
+	<section id="history" class="section">
 		<!-- S3 content -->
 		<div class="container s3">
 			<div class="card card--6col s3-card">
@@ -168,7 +168,7 @@
 	</section>
 
 	<!-- Section 4 - works -->
-	<section class="section">
+	<section id="portfolio" class="section">
 		<div class="container s4">
 			<div class="card s4__card">
 				<h2>Our works</h2>
@@ -200,7 +200,7 @@
 	<!-- ! Section 5 - team -->
 
 	<!-- ! Section 6 - reviews -->
-	<section class="section">
+	<section id="reviews" class="section">
 		<div class="container s6">
 			<div class="card card--5col s6-card">
 				<h2 class="s6-card__title">Lovely words</h2>
@@ -211,9 +211,33 @@
 			</div>
 
 			<div class="s6__reviews reviews">
-				<div class="reviews__image"></div>
-				<div class="reviews__slider">
+				<div class="reviews__image">
+					<svg viewBox="0 0 30 25">
+						<path
+							d="M12.836,12.358 C12.163,11.695 11.346,11.364 10.385,11.364 L6.346,11.364 C5.865,11.364 5.456,11.198 5.120,10.866 C4.784,10.535 4.615,10.132 4.615,9.659 L4.615,9.091 C4.615,7.836 5.066,6.765 5.968,5.877 C6.869,4.989 7.957,4.545 9.231,4.545 L10.385,4.545 C10.697,4.545 10.967,4.433 11.196,4.208 C11.424,3.983 11.538,3.717 11.538,3.409 L11.538,1.136 C11.538,0.829 11.424,0.562 11.196,0.337 C10.967,0.112 10.697,-0.000 10.385,-0.000 L9.231,-0.000 C7.981,-0.000 6.788,0.239 5.652,0.719 C4.516,1.198 3.534,1.846 2.704,2.663 C1.875,3.480 1.217,4.448 0.730,5.566 C0.243,6.685 -0.000,7.860 -0.000,9.091 L-0.000,21.591 C-0.000,22.538 0.336,23.343 1.010,24.006 C1.683,24.668 2.500,25.000 3.461,25.000 L10.385,25.000 C11.346,25.000 12.163,24.668 12.836,24.006 C13.509,23.343 13.846,22.538 13.846,21.591 L13.846,14.773 C13.846,13.826 13.509,13.021 12.836,12.358 ZM28.990,12.358 C28.317,11.695 27.500,11.364 26.538,11.364 L22.500,11.364 C22.019,11.364 21.610,11.198 21.274,10.866 C20.937,10.535 20.769,10.132 20.769,9.659 L20.769,9.091 C20.769,7.836 21.220,6.765 22.121,5.877 C23.023,4.989 24.110,4.545 25.385,4.545 L26.538,4.545 C26.851,4.545 27.121,4.433 27.350,4.208 C27.578,3.983 27.692,3.717 27.692,3.409 L27.692,1.136 C27.692,0.829 27.578,0.562 27.350,0.337 C27.121,0.112 26.851,-0.000 26.538,-0.000 L25.385,-0.000 C24.134,-0.000 22.942,0.239 21.806,0.719 C20.670,1.198 19.687,1.846 18.858,2.663 C18.029,3.480 17.371,4.448 16.884,5.566 C16.397,6.685 16.154,7.860 16.154,9.091 L16.154,21.591 C16.154,22.538 16.490,23.343 17.163,24.006 C17.836,24.668 18.654,25.000 19.615,25.000 L26.538,25.000 C27.500,25.000 28.317,24.668 28.990,24.006 C29.663,23.343 30.000,22.538 30.000,21.591 L30.000,14.773 C30.000,13.826 29.663,13.021 28.990,12.358 Z" />
+					</svg>
+				</div>
 
+				<div class="reviews__slider">
+					<blockquote class="slider__card">
+						<p class="slider__text">Dynamically monetize just in time infomediaries via viral architectures.
+							Monotonectally redefine
+							standards compliant mindshare. Seamlessly generate backend functionalities and exceptional core
+							competencies.</p>
+						<cite class="slider__site">- CEO, Milford Co.</cite>
+					</blockquote>
+					<button class="arrow arrow--left">
+						<svg viewBox="0 0 13 20">
+							<path
+								d="M13.000,2.853 C13.000,2.638 12.920,2.452 12.762,2.295 L10.678,0.235 C10.520,0.078 10.331,-0.000 10.114,-0.000 C9.896,-0.000 9.708,0.078 9.549,0.235 L0.238,9.442 C0.079,9.598 -0.000,9.785 -0.000,10.000 C-0.000,10.215 0.079,10.401 0.238,10.558 L9.549,19.764 C9.708,19.921 9.896,20.000 10.114,20.000 C10.331,20.000 10.520,19.921 10.678,19.764 L12.762,17.704 C12.920,17.548 13.000,17.361 13.000,17.146 C13.000,16.931 12.920,16.745 12.762,16.588 L6.098,10.000 L12.762,3.412 C12.920,3.255 13.000,3.068 13.000,2.853 Z" />
+						</svg>
+					</button>
+					<button class="arrow arrow--right">
+						<svg viewBox="0 0 13 20">
+							<path
+								d="M-0.000,2.853 C-0.000,2.638 0.079,2.452 0.238,2.295 L2.321,0.235 C2.480,0.078 2.669,-0.000 2.886,-0.000 C3.104,-0.000 3.292,0.078 3.451,0.235 L12.761,9.442 C12.921,9.598 13.000,9.785 13.000,10.000 C13.000,10.215 12.921,10.401 12.761,10.558 L3.451,19.764 C3.292,19.921 3.104,20.000 2.886,20.000 C2.669,20.000 2.480,19.921 2.321,19.764 L0.238,17.704 C0.079,17.548 -0.000,17.361 -0.000,17.146 C-0.000,16.931 0.079,16.745 0.238,16.588 L6.901,10.000 L0.238,3.412 C0.079,3.255 -0.000,3.068 -0.000,2.853 Z" />
+						</svg>
+					</button>
 				</div>
 			</div>
 
@@ -227,7 +251,7 @@
 	</section>
 
 	<!-- Section 7 - contacts -->
-	<section class="section section--grey">
+	<section id="contacts" class="section section--grey">
 		<div class="container s7">
 			<div class="card card--5col s7-card">
 				<h2 class="s7-card__title">Contact</h2>

@@ -3,10 +3,93 @@
 	justify-content: space-between;
 	flex-wrap: wrap;
 
-	&__reviews {}
-
 	&__clients {
 		margin-top: 7.5rem;
+	}
+}
+
+.reviews {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: calc(50% - 15px);
+	// background-color: beige;
+
+	&__image {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 3.5rem;
+		height: 3.5rem;
+		padding: 0.7rem;
+		margin-bottom: 3rem;
+		border: 5px solid $bronze;
+		& svg {
+			height: 100%;
+			fill: $bronze;
+		}
+	}
+
+	&__slider {
+		position: relative;
+		flex-grow: 1;
+	}
+}
+
+.slider {
+	&__card {
+		margin: 0;
+		margin-bottom: 2rem;
+
+		font-family: $mw-font;
+		font-style: italic;
+		font-size: 1rem;
+		text-align: center;
+		line-height: 1.5;
+	}
+	&__text {
+		margin-top: 0;
+		margin-bottom: 1.5rem;
+	}
+	&__site {
+		color: $bronze;
+	}
+}
+
+.arrow {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	width: 50%;
+	height: 1rem;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+
+	& svg {
+		fill: $bronze;
+		height: 100%;
+		transition: 1s;
+	}
+
+	&--left {
+		right: 50%; justify-content: flex-end;
+		&:hover svg {
+			transform: translateX(-15px) scale(1.5);
+			fill: $gold;
+		}
+	}
+	&--right {
+		left: 50%;
+		&:hover svg {
+			transform: translateX(15px) scale(1.5);
+			fill: $gold;
+		}
+	}
+
+	&:focus {
+		outline: none;
 	}
 }
 
@@ -21,5 +104,21 @@
 		max-width: 25%;
 		overflow: hidden;
 		object-fit: contain;
+		&:not(:last-child) {margin-right: 15px;}
+	}
+}
+
+// ----- Mobile version -----
+@media all and (max-width: 768px) {
+	.reviews {
+		width: 100%;
+		margin-top: 15px;
+		&__image {
+			margin-bottom: 15px;
+		}
+	}
+
+	.clients {
+		margin-top: 45px;
 	}
 }
