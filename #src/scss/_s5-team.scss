@@ -1,0 +1,78 @@
+.s5 {
+	display: flex;
+	flex-flow: column wrap;
+	align-content: space-between;
+
+	&__member {
+		margin-left: 8.33%;
+	}
+}
+
+.s5-card {
+	order: 4;
+}
+
+.member {
+	flex-basis: 100%;
+	order: 2;
+	width: calc(33.33% - 15px);
+	border: 10px solid $gold;
+
+	&__photo {
+		position: relative;
+		overflow: hidden;
+		padding-top: 135%;
+
+		& img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__data {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem 15px;
+	}
+
+	&__name {
+		flex: 1 1 100%;
+		margin-top: 0;
+		margin-bottom: 1rem;
+		font-family: $os-font;
+		font-weight: 300;
+		font-size: 1.2rem;
+		color: $bronze;
+	}
+	&__function {
+		flex: 1 0 60%;
+		margin: 0;
+		font-family: $os-font;
+		font-style: italic;
+		font-weight: 300;
+		font-size: 0.8rem;
+		color: $bronze;
+	}
+	&__links {
+		flex: 0 0 auto;
+		display: flex;
+	}
+	&__link {
+		display: block;
+		height: 1rem;
+		overflow: hidden;
+		& svg {
+			height: 100%;
+			fill: $m-grey;
+			&:hover {fill: $bronze;}
+		}
+		&:not(:last-child) {margin-right: 0.5rem;}
+	}
+}
