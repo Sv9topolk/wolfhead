@@ -1308,6 +1308,20 @@ h3 {
   outline: none;
 }
 
+.swiper-button-next {
+  top: auto;
+}
+
+.swiper-button-prev {
+  top: auto;
+  left: 0;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  display: none;
+}
+
 .clients {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1496,9 +1510,7 @@ h3 {
 .form__btn:hover {
   color: #e6b446;
   border-color: #e6b446;
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
+  cursor: pointer;
 }
 
 .footer {
@@ -1646,6 +1658,10 @@ h3 {
     margin-right: 10px;
   }
 
+  .s1__tagline {
+    margin-bottom: 15px;
+  }
+
   .header {
     top: 15px;
   }
@@ -1654,7 +1670,7 @@ h3 {
     top: -15px;
     left: 0;
     right: 0;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #f5f0a0;
   }
 

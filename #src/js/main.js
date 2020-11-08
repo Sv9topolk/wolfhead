@@ -1,5 +1,3 @@
-'use strict';
-
 import Swiper, { Navigation, Pagination } from 'swiper';
 Swiper.use([Navigation, Pagination]);
 
@@ -14,8 +12,7 @@ menuToggle.onclick = function () {
 	menuLogo.classList.toggle('header__logo--left');
 }
 
-
-// Slider Swiper in reviews section 
+// Slider swiper for reviews section
 const mySwiper = new Swiper('.swiper-container', {
 	// Optional parameters
 	loop: true,

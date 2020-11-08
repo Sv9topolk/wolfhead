@@ -1,5 +1,5 @@
 
-//let project_folder = 'dist'; //Именует папку сборки dist
+// let project_folder = 'dist'; //Именует папку сборки dist
 let project_folder = require('path').basename(__dirname); //Именует папку сборки по названию папки проекта
 let source_folder = '#src';
 
@@ -15,17 +15,17 @@ let path = {
 		html: [source_folder + '/*.html', '!' + source_folder + '/_*.html'],
 		css: source_folder + '/scss/main.scss',
 		js: source_folder + '/js/main.js',
-		media: source_folder + '/media/**/*.{jpg,png,svg,gif,ico,webp}',
+		media: source_folder + '/media/**/*.{jpg,png,svg,gif,ico,webp,mp4,ogv,webm}',
 		fonts: source_folder + '/fonts/*.{ttf,otf,woff,woff2}',
 	},
 	watch: {
 		html: source_folder + '/**/*.html',
 		css: source_folder + '/scss/**/*.scss',
 		js: source_folder + '/js/**/*.js',
-		media: source_folder + '/media/**/*.{jpg,png,svg,gif,ico,webp}',
+		media: source_folder + '/media/**/*.{jpg,png,svg,gif,ico,webp,mp4,ogv,webm}',
 	},
 	clean: './' + project_folder + '/'
-}
+};
 
 let { src, dest } = require('gulp'),
 	gulp = require('gulp'),
@@ -37,7 +37,9 @@ let { src, dest } = require('gulp'),
 	group_media = require('gulp-group-css-media-queries'),
 	clean_css = require('gulp-clean-css'),
 	rename = require('gulp-rename'),
-	uglify = require('gulp-uglify-es').default;
+	uglify = require('gulp-uglify-es').default,
+	webpack = require('webpack'),
+	webpackStream = require('webpack-stream');
 
 function browserSync(params) {
 	browsersync.init({
@@ -85,6 +87,26 @@ function css() {
 
 function js() {
 	return src(path.src.js)
+		.pipe(webpackStream({
+			output: {
+				filename: '[name].js',
+			},
+			module: {
+				rules: [
+					{
+						test: /\.(js)$/,
+						exclude: /(node_modules)/,
+						loader: 'babel-loader',
+						query: {
+							presets: ["@babel/preset-env"]
+						}
+					}
+				]
+			},
+			externals: {
+				jquery: 'jQuery'
+			}
+		}))
 		.pipe(fileinclude())
 		.pipe(dest(path.build.js))
 		.pipe(

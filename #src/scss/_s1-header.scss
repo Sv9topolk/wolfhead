@@ -194,6 +194,10 @@
 		}
 	}
 
+	.s1__tagline {
+		margin-bottom: 15px;
+	}
+
 	.header {
 		top: 15px;
 	}
@@ -202,7 +206,7 @@
 		top: -15px;
 		left: 0;
 		right: 0;
-		height: 100vh;
+		min-height: 100vh;
 		background-color: $sand;
 	
 		&__list {

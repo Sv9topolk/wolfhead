@@ -1,6 +1,9 @@
 @import "normalize";
+@import "../../node_modules/swiper/swiper-bundle.css";
+
 @import "fonts";
 @import "settings";
+
 @import "s1-header";
 @import "s2-process";
 @import "s3-history";
@@ -9,5 +12,3 @@
 @import "s6-reviews";
 @import "s7-contact";
 @import "footer";
-
-@import "../../node_modules/swiper/swiper-bundle.css";
