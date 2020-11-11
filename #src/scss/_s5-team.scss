@@ -2,9 +2,16 @@
 	display: flex;
 	flex-flow: column wrap;
 	align-content: space-between;
+	justify-content: space-between;
+	max-height: 37.5rem;
+	overflow: hidden;
 
-	&__member {
+	&__members-container {
+		flex-basis: 100%;
+		order: 2;
 		margin-left: 8.33%;
+		width: calc(33.33% - 15px);
+		border: 10px solid $gold;
 	}
 }
 
@@ -13,10 +20,8 @@
 }
 
 .member {
-	flex-basis: 100%;
-	order: 2;
-	width: calc(33.33% - 15px);
-	border: 10px solid $gold;
+	display: none;
+	&--active {display: block;}
 
 	&__photo {
 		position: relative;
@@ -75,4 +80,29 @@
 		}
 		&:not(:last-child) {margin-right: 0.5rem;}
 	}
+}
+
+// Tabs
+.tabs-triggers {
+	order: 6;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	&__item {
+		display: block;
+		width: 5rem;
+		height: 5rem;
+		background-size: cover;
+		overflow: hidden;
+		border: 5px solid $gold;
+		opacity: 0.5;
+
+		&--active {opacity: 1;}
+	}
+
+	&__item--1 {background-image: url('../media/team-1.jpg');}
+	&__item--2 {background-image: url('../media/team-2.jpg');}
+	&__item--3 {background-image: url('../media/team-3.jpg');}
+	&__item--4 {background-image: url('../media/team-4.jpg');}
 }

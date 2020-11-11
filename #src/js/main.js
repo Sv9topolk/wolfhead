@@ -54,3 +54,21 @@ const mySwiper = new Swiper('.swiper-container', {
 		prevEl: '.swiper-button-prev',
 	},
 })
+
+// ! Tabs for team section
+document.querySelectorAll('.tabs-triggers__item').forEach((item) =>
+	item.addEventListener('click', function (e) {
+		e.preventDefault();
+		const id = e.target.getAttribute('href').replace('#', '');
+
+		document.querySelectorAll('.tabs-triggers__item').forEach(
+			(child) => child.classList.remove('tabs-triggers__item--active')
+		);
+		document.querySelectorAll('.member').forEach(
+			(child) => child.classList.remove('member--active')
+		);
+
+		item.classList.add('tabs-triggers__item--active');
+		document.getElementById(id).classList.add('member--active')
+	})
+);
