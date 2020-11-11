@@ -86,7 +86,7 @@
 									"pr-1 pr-1 pr-1 pr-1 pr-1 pr-1 pr-3 pr-3 pr-3 pr-3 pr-3 pr-3"
 									"pr-4 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4";
 	
-		&__card            {grid-area: card;}
+		&__card            {grid-area: card; margin-right: 30px;}
 		&__project--active {grid-area: pr-a;}
 		&__project--1      {grid-area: pr-1;}
 		&__project--2      {grid-area: pr-2;}

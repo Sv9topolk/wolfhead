@@ -1062,40 +1062,25 @@ h3 {
 }
 
 .s5 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  max-height: 37.5rem;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr calc(50% - 15px);
+  grid-template-rows: 0px auto auto;
+  grid-template-areas: ".    .   " "memb card" "memb tabs";
 }
 
 .s5__members-container {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-  margin-left: 8.33%;
-  width: calc(33.33% - 15px);
+  grid-area: memb;
+  margin-left: calc(17% - 15px);
+  margin-right: calc(21.67% - 15px);
   border: 10px solid #e6b446;
 }
 
 .s5-card {
-  -webkit-box-ordinal-group: 5;
-      -ms-flex-order: 4;
-          order: 4;
+  grid-area: card;
 }
 
 .member {
+  max-height: 100vh;
   display: none;
 }
 
@@ -1188,9 +1173,7 @@ h3 {
 }
 
 .tabs-triggers {
-  -webkit-box-ordinal-group: 7;
-      -ms-flex-order: 6;
-          order: 6;
+  grid-area: tabs;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1199,12 +1182,16 @@ h3 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .tabs-triggers__item {
   display: block;
   width: 5rem;
   height: 5rem;
+  margin-top: 10px;
   background-size: cover;
   overflow: hidden;
   border: 5px solid #e6b446;
@@ -1830,6 +1817,7 @@ h3 {
 
   .s4__card {
     grid-area: card;
+    margin-right: 30px;
   }
 
   .s4__project--active {
@@ -1854,6 +1842,34 @@ h3 {
 
   .s4__project--active {
     border-width: 5px;
+  }
+
+  .s5 {
+    grid-template-columns: auto 5rem;
+    grid-template-rows: auto auto;
+    grid-template-areas: "card card" "memb tabs";
+  }
+
+  .s5-card {
+    width: calc(91.33% - 30px);
+    margin-bottom: 15px;
+  }
+
+  .s5__members-container {
+    margin-left: 0;
+    margin-right: 15px;
+    border-width: 5px;
+  }
+
+  .tabs-triggers {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .tabs-triggers__item {
+    margin-top: 0;
   }
 
   .reviews {
