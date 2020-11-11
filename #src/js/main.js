@@ -6,11 +6,11 @@ const menuToggle = document.querySelector('#menu-toggle');
 const menuHide = document.querySelector('#menu-hide');
 const menuLogo = document.querySelector('#logo');
 
-menuToggle.addEventListener('click', function () {
-	let body = document.querySelector('body');
-	let html = document.documentElement.clientWidth;
-	let bodyPadding = window.innerWidth - html;
+let body = document.querySelector('body');
+let html = document.documentElement.clientWidth;
+let bodyPadding = window.innerWidth - html;
 
+menuToggle.addEventListener('click', function () {
 	menuToggle.classList.toggle('burger--active');
 	menuHide.classList.toggle('menu--hide');
 	menuLogo.classList.toggle('header__logo--left');
@@ -22,7 +22,22 @@ menuToggle.addEventListener('click', function () {
 	} else {
 		document.querySelector('.header').style.paddingRight = 0 + 'px';
 		body.style.overflow = 'visible';
-		menuHide.style.right = '0';
+		menuHide.removeAttribute('style');
+	}
+});
+
+menuHide.addEventListener('click', function (e) {
+	let target = e.target;
+	if (target.closest('.menu--hide')) {
+		menuToggle.classList.toggle('burger--active');
+		menuHide.classList.toggle('menu--hide');
+		menuLogo.classList.toggle('header__logo--left');
+
+		if (window.matchMedia('(max-width: 768px)').matches) {
+			document.querySelector('.header').style.paddingRight = 0 + 'px';
+			body.style.overflow = 'visible';
+			//menuHide.style.right = '0';
+		}
 	}
 });
 
