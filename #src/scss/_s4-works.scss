@@ -1,5 +1,5 @@
 // Grid settings
-.s4 {
+.works {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: minmax(21rem, max-content) 14.5rem 17.5rem;
@@ -9,16 +9,16 @@
 	                     "pr-1 pr-1 pr-1 pr-1 pr-2 pr-2 pr-2 pr-2 pr-3 pr-3 pr-3 pr-3"
 	                     "pr-1 pr-1 pr-1 pr-1 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4";
 
-	&__card            {grid-area: card;}
-	&__project--active {grid-area: pr-a;}
-	&__project--1      {grid-area: pr-1;}
-	&__project--2      {grid-area: pr-2;}
-	&__project--3      {grid-area: pr-3;}
-	&__project--4      {grid-area: pr-4;}
+	&__card       {grid-area: card;}
+	&__project--a {grid-area: pr-a;}
+	&__project--1 {grid-area: pr-1;}
+	&__project--2 {grid-area: pr-2;}
+	&__project--3 {grid-area: pr-3;}
+	&__project--4 {grid-area: pr-4;}
 }
 
 // Styles for project images
-.s4__project {
+.works__project {
 	overflow: hidden;
 	& img {
 		display: block;
@@ -26,16 +26,12 @@
 		height: 100%;
 		object-fit: cover;
 		transition: 1s;
-		&:hover {
-			transform: scale(1.1);
-		}
 	}
 }
 
 // Other styles
-.s4 {
-	&__project--active {
-		border: 10px solid $gold;
+.works {
+	&__project {
 		position: relative;
 	}
 }
@@ -53,7 +49,9 @@
 	height: 100%;
 	padding: 15px;
 
+	text-decoration: none;
 	background-color: rgba(50, 50, 50, 0.8);
+	border: 10px solid $gold;
 	overflow: hidden;
 	transition: 0.5s;
 	opacity: 0;
@@ -74,9 +72,11 @@
 	}
 }
 
+.overlay:hover ~ img {transform: scale(1.1);}
+
 // Mobile version
 @media all and (max-width: 768px) {
-	.s4 {
+	.works {
 		grid-template-rows: auto calc(25vh - 10px) calc(25vh - 10px) calc(25vh - 10px) calc(25vh - 10px);
 		gap: 10px;
 	
@@ -86,15 +86,15 @@
 									"pr-1 pr-1 pr-1 pr-1 pr-1 pr-1 pr-3 pr-3 pr-3 pr-3 pr-3 pr-3"
 									"pr-4 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4";
 	
-		&__card            {grid-area: card; margin-right: 30px;}
-		&__project--active {grid-area: pr-a;}
-		&__project--1      {grid-area: pr-1;}
-		&__project--2      {grid-area: pr-2;}
-		&__project--3      {grid-area: pr-3;}
-		&__project--4      {grid-area: pr-4;}
+		&__card       {grid-area: card; margin-right: 30px;}
+		&__project--a {grid-area: pr-a;}
+		&__project--1 {grid-area: pr-1;}
+		&__project--2 {grid-area: pr-2;}
+		&__project--3 {grid-area: pr-3;}
+		&__project--4 {grid-area: pr-4;}
 	}
 
-	.s4__project--active {
+	.overlay {
 		border-width: 5px;
 	}
 }

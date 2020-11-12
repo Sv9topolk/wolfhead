@@ -449,6 +449,10 @@ body {
   font-size: 20px;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -566,7 +570,7 @@ h3 {
   font-weight: 400;
 }
 
-.s1-fullscreen {
+.head-fullscreen {
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -769,7 +773,7 @@ h3 {
   transition: top 0.2s linear, transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s;
 }
 
-.s1 {
+.head {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -785,7 +789,7 @@ h3 {
           align-items: center;
 }
 
-.s1__tagline {
+.head__tagline {
   margin: 0 0 2.5rem;
   font-family: "Merriweather", serif;
   font-size: 1.2rem;
@@ -795,23 +799,23 @@ h3 {
   text-align: center;
 }
 
-.s1__btn-container {
+.head__btn-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.s1__btn {
+.head__btn {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
 
-.s1__btn:hover {
+.head__btn:hover {
   color: #f5f0a0;
   border-color: #f5f0a0;
 }
 
-.s2-header {
+.services-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -820,7 +824,7 @@ h3 {
           justify-content: flex-start;
 }
 
-.s2-header__bg-image {
+.services-header__bg-image {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -832,7 +836,7 @@ h3 {
   background-position: center right;
 }
 
-.s2-services {
+.services {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -845,7 +849,7 @@ h3 {
       align-content: stretch;
 }
 
-.s2-servicecard {
+.servicecard {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -855,15 +859,15 @@ h3 {
           flex-grow: 0;
   -ms-flex-preferred-size: calc(50% - 15px);
       flex-basis: calc(50% - 15px);
-  margin-bottom: 15px;
+  margin-bottom: 4rem;
 }
 
-.s2-servicecard:nth-last-child(1),
-.s2-servicecard:nth-last-child(2) {
+.servicecard:nth-last-child(1),
+.servicecard:nth-last-child(2) {
   margin-bottom: 0;
 }
 
-.s2-servicecard__heading {
+.servicecard__heading {
   position: absolute;
   top: 0;
   left: 0;
@@ -879,19 +883,22 @@ h3 {
       -ms-flex-align: center;
           align-items: center;
   width: 60%;
+  padding: 1rem;
   background-color: #fff;
   border: 5px solid #3f3f3f;
-  padding: 1rem;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.s2-servicecard__image {
+.servicecard__image {
   height: 5rem;
   margin-bottom: 1.5rem;
   text-align: center;
   fill: #3f3f3f;
 }
 
-.s2-servicecard__text-container {
+.servicecard__text-container {
   margin-top: 5.35rem;
   padding-top: 6.5rem;
   padding-bottom: 1.5rem;
@@ -900,19 +907,40 @@ h3 {
   background-color: #f2f2f2;
 }
 
-.s2-servicecard:hover .s2-servicecard__heading {
+.servicecard__heading {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.servicecard__title {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.servicecard__image {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.servicecard:hover .servicecard__heading {
   border-color: #e6b446;
 }
 
-.s2-servicecard:hover .s2-servicecard__title {
+.servicecard:hover .servicecard__title {
   color: #e6b446;
 }
 
-.s2-servicecard:hover .s2-servicecard__image {
+.servicecard:hover .servicecard__image {
   fill: #e6b446;
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
-.s3 {
+.history {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -922,7 +950,7 @@ h3 {
           justify-content: flex-end;
 }
 
-.s3__bg-video {
+.history__bg-video {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -932,14 +960,14 @@ h3 {
   overflow: hidden;
 }
 
-.s3__bg-video video {
+.history__bg-video video {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.s3__bg-image {
+.history__bg-image {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -954,7 +982,7 @@ h3 {
   display: none;
 }
 
-.s4 {
+.works {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: minmax(21rem, -webkit-max-content) 14.5rem 17.5rem;
@@ -963,35 +991,35 @@ h3 {
   grid-template-areas: "card card card card card pr-a pr-a pr-a pr-a pr-a pr-a pr-a" "pr-1 pr-1 pr-1 pr-1 pr-2 pr-2 pr-2 pr-2 pr-3 pr-3 pr-3 pr-3" "pr-1 pr-1 pr-1 pr-1 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4";
 }
 
-.s4__card {
+.works__card {
   grid-area: card;
 }
 
-.s4__project--active {
+.works__project--a {
   grid-area: pr-a;
 }
 
-.s4__project--1 {
+.works__project--1 {
   grid-area: pr-1;
 }
 
-.s4__project--2 {
+.works__project--2 {
   grid-area: pr-2;
 }
 
-.s4__project--3 {
+.works__project--3 {
   grid-area: pr-3;
 }
 
-.s4__project--4 {
+.works__project--4 {
   grid-area: pr-4;
 }
 
-.s4__project {
+.works__project {
   overflow: hidden;
 }
 
-.s4__project img {
+.works__project img {
   display: block;
   width: 100%;
   height: 100%;
@@ -1002,14 +1030,7 @@ h3 {
   transition: 1s;
 }
 
-.s4__project img:hover {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.s4__project--active {
-  border: 10px solid #e6b446;
+.works__project {
   position: relative;
 }
 
@@ -1034,7 +1055,9 @@ h3 {
   width: 100%;
   height: 100%;
   padding: 15px;
+  text-decoration: none;
   background-color: rgba(50, 50, 50, 0.8);
+  border: 10px solid #e6b446;
   overflow: hidden;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -1061,26 +1084,31 @@ h3 {
   margin-bottom: 1rem;
 }
 
-.s5 {
+.overlay:hover ~ img {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.team {
   display: grid;
   grid-template-columns: 1fr calc(50% - 15px);
   grid-template-rows: 0px auto auto;
   grid-template-areas: ".    .   " "memb card" "memb tabs";
 }
 
-.s5__members-container {
+.team__members-container {
   grid-area: memb;
   margin-left: calc(17% - 15px);
   margin-right: calc(21.67% - 15px);
   border: 10px solid #e6b446;
 }
 
-.s5-card {
+.team-card {
   grid-area: card;
 }
 
 .member {
-  max-height: 100vh;
   display: none;
 }
 
@@ -1195,11 +1223,18 @@ h3 {
   background-size: cover;
   overflow: hidden;
   border: 5px solid #e6b446;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   opacity: 0.5;
 }
 
 .tabs-triggers__item--active {
   opacity: 1;
+}
+
+.tabs-triggers__item:hover {
+  opacity: 0.8;
 }
 
 .tabs-triggers__item--1 {
@@ -1218,7 +1253,7 @@ h3 {
   background-image: url("../media/team-4.jpg");
 }
 
-.s6 {
+.feedback {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1229,7 +1264,7 @@ h3 {
       flex-wrap: wrap;
 }
 
-.s6__clients {
+.feedback__clients {
   margin-top: 7.5rem;
 }
 
@@ -1295,7 +1330,6 @@ h3 {
 
 .arrow {
   position: absolute;
-  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1382,13 +1416,22 @@ h3 {
   overflow: hidden;
   -o-object-fit: contain;
      object-fit: contain;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .clients__image:not(:last-child) {
   margin-right: 15px;
 }
 
-.s7 {
+.clients__image:hover {
+  -webkit-transform: translateY(-5px) scale(1.03);
+      -ms-transform: translateY(-5px) scale(1.03);
+          transform: translateY(-5px) scale(1.03);
+}
+
+.contacts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1397,7 +1440,7 @@ h3 {
           justify-content: space-between;
 }
 
-.s7-card {
+.contacts-card {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   -webkit-box-ordinal-group: 5;
@@ -1405,17 +1448,17 @@ h3 {
           order: 4;
 }
 
-.s7-card__text {
+.contacts-card__text {
   padding-bottom: 2.5rem;
 }
 
-.s7-card__socials {
+.contacts-card__socials {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.s7-card__soc-icon {
+.contacts-card__soc-icon {
   display: block;
   height: 1.5rem;
   margin-right: 1rem;
@@ -1423,7 +1466,7 @@ h3 {
   text-align: center;
 }
 
-.s7-card__soc-icon svg {
+.contacts-card__soc-icon svg {
   height: 100%;
   fill: #999999;
   -webkit-transition: 0.5s;
@@ -1431,7 +1474,7 @@ h3 {
   transition: 0.5s;
 }
 
-.s7-card__soc-icon:hover svg {
+.contacts-card__soc-icon:hover svg {
   fill: #8c6e28;
 }
 
@@ -1542,10 +1585,6 @@ h3 {
   margin-bottom: 1.5rem;
   padding: 0;
   resize: none;
-}
-
-.form__btn:focus {
-  outline: none;
 }
 
 .form__btn:hover {
@@ -1691,15 +1730,15 @@ h3 {
     font-size: 2rem;
   }
 
-  .s1__btn {
+  .head__btn {
     margin: 0;
   }
 
-  .s1__btn:first-child {
+  .head__btn:first-child {
     margin-right: 10px;
   }
 
-  .s1__tagline {
+  .head__tagline {
     margin-bottom: 15px;
   }
 
@@ -1764,20 +1803,20 @@ h3 {
             transform: translateX(-50%) scale(1);
   }
 
-  .s2-header__bg-image {
+  .services-header__bg-image {
     opacity: 0.5;
   }
 
-  .s2-servicecard {
+  .servicecard {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
 
-  .s2-servicecard:nth-last-child(2) {
+  .servicecard:nth-last-child(2) {
     margin-bottom: 15px;
   }
 
-  .s2-servicecard__heading {
+  .servicecard__heading {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1787,7 +1826,7 @@ h3 {
     border-width: 3px;
   }
 
-  .s2-servicecard__image {
+  .servicecard__image {
     width: 60px;
     height: 50px;
     margin-right: 15px;
@@ -1796,66 +1835,67 @@ h3 {
         flex-shrink: 0;
   }
 
-  .s2-servicecard__text-container {
+  .servicecard__text-container {
     margin-top: 40px;
     padding-top: 55px;
   }
 
-  .s3__bg-video {
+  .history__bg-video {
     display: none;
   }
 
-  .s3__bg-image {
+  .history__bg-image {
     display: block;
   }
 
-  .s4 {
+  .works {
     grid-template-rows: auto calc(25vh - 10px) calc(25vh - 10px) calc(25vh - 10px) calc(25vh - 10px);
     gap: 10px;
     grid-template-areas: "card card card card card card card card card card card .   " "pr-a pr-a pr-a pr-a pr-a pr-a pr-a pr-a pr-a pr-a pr-a pr-a" "pr-1 pr-1 pr-1 pr-1 pr-1 pr-1 pr-2 pr-2 pr-2 pr-2 pr-2 pr-2" "pr-1 pr-1 pr-1 pr-1 pr-1 pr-1 pr-3 pr-3 pr-3 pr-3 pr-3 pr-3" "pr-4 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4 pr-4";
   }
 
-  .s4__card {
+  .works__card {
     grid-area: card;
     margin-right: 30px;
   }
 
-  .s4__project--active {
+  .works__project--a {
     grid-area: pr-a;
   }
 
-  .s4__project--1 {
+  .works__project--1 {
     grid-area: pr-1;
   }
 
-  .s4__project--2 {
+  .works__project--2 {
     grid-area: pr-2;
   }
 
-  .s4__project--3 {
+  .works__project--3 {
     grid-area: pr-3;
   }
 
-  .s4__project--4 {
+  .works__project--4 {
     grid-area: pr-4;
   }
 
-  .s4__project--active {
+  .overlay {
     border-width: 5px;
   }
 
-  .s5 {
+  .team {
     grid-template-columns: auto 5rem;
     grid-template-rows: auto auto;
     grid-template-areas: "card card" "memb tabs";
   }
 
-  .s5-card {
+  .team-card {
     width: calc(91.33% - 30px);
     margin-bottom: 15px;
   }
 
-  .s5__members-container {
+  .team__members-container {
+    max-width: 400px;
     margin-left: 0;
     margin-right: 15px;
     border-width: 5px;
@@ -1885,21 +1925,21 @@ h3 {
     margin-top: 45px;
   }
 
-  .s7 {
+  .contacts {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
 
-  .s7-card {
+  .contacts-card {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
     margin-bottom: 15px;
   }
 
-  .s7-card__text {
+  .contacts-card__text {
     padding-bottom: 15px;
   }
 

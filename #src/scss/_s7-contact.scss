@@ -1,9 +1,9 @@
-.s7 {
+.contacts {
 	display: flex;
 	justify-content: space-between;
 }
 
-.s7-card {
+.contacts-card {
 	flex-shrink: 0;
 	order: 4;
 	&__text {
@@ -91,10 +91,6 @@
 	}
 
 	&__btn {
-		&:focus {
-			outline: none;
-		}
-		
 		&:hover {
 			color: $gold;
 			border-color: $gold;
@@ -105,11 +101,11 @@
 
 // Mobile version
 @media all and (max-width: 768px) {
-	.s7 {
+	.contacts {
 		flex-direction: column;
 	}
 
-	.s7-card {
+	.contacts-card {
 		order: 1;
 		margin-bottom: 15px;
 		&__text {

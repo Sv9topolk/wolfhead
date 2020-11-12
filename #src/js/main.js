@@ -20,7 +20,7 @@ menuToggle.addEventListener('click', function () {
 		body.style.overflow = 'hidden';
 		menuHide.style.right = '-' + (window.innerWidth - html) + 'px';
 	} else {
-		document.querySelector('.header').style.paddingRight = 0 + 'px';
+		document.querySelector('.header').removeAttribute('style');
 		body.style.overflow = 'visible';
 		menuHide.removeAttribute('style');
 	}
@@ -34,9 +34,8 @@ menuHide.addEventListener('click', function (e) {
 		menuLogo.classList.toggle('header__logo--left');
 
 		if (window.matchMedia('(max-width: 768px)').matches) {
-			document.querySelector('.header').style.paddingRight = 0 + 'px';
+			document.querySelector('.header').removeAttribute('style');
 			body.style.overflow = 'visible';
-			//menuHide.style.right = '0';
 		}
 	}
 });

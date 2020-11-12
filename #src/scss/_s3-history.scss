@@ -1,6 +1,6 @@
 // ! С видео повозиться надо
 
-.s3 {
+.history {
 	position: relative;
 	display: flex;
 	justify-content: flex-end;
@@ -41,7 +41,7 @@
 
 // Mobile version
 @media all and (max-width: 768px) {
-	.s3 {
+	.history {
 		&__bg-video {display: none;}
 		&__bg-image {display: block;}
 	}

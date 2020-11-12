@@ -1,4 +1,4 @@
-.s6 {
+.feedback {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
@@ -57,7 +57,7 @@
 
 .arrow {
 	position: absolute;
-	bottom: 0;
+	// bottom: 0; переопределен в swiper
 	display: flex;
 	align-items: center;
 	width: 50%;
@@ -105,18 +105,20 @@
 	display: none;
 }
 
-
 .clients {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-	&__image {
+		&__image {
 		height: 7rem;
 		max-width: 25%;
 		overflow: hidden;
 		object-fit: contain;
 		&:not(:last-child) {margin-right: 15px;}
+
+		transition: 0.5s;
+		&:hover {transform: translateY(-5px) scale(1.03);}
 	}
 }
 
