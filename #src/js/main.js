@@ -40,6 +40,32 @@ menuHide.addEventListener('click', function (e) {
 	}
 });
 
+
+// ! Video control for history section
+let mediaPlayer;
+let videoControl = document.getElementById('play-pause-button');
+let controlName = document.querySelector('.controls__name');
+
+document.addEventListener("DOMContentLoaded", function () { initialiseMediaPlayer(); }, false);
+
+function initialiseMediaPlayer() {
+	mediaPlayer = document.getElementById('video');
+	mediaPlayer.controls = false;
+}
+
+videoControl.addEventListener('click', function () {
+	if (mediaPlayer.paused || mediaPlayer.ended) {
+		videoControl.className = 'pause';
+		mediaPlayer.play();
+		controlName.innerHTML = 'pause';
+	} else {
+		videoControl.className = 'play';
+		mediaPlayer.pause();
+		controlName.innerHTML = 'play video';
+	}
+});
+
+
 // ! Slider swiper for reviews section
 const mySwiper = new Swiper('.swiper-container', {
 	// Optional parameters
@@ -51,6 +77,7 @@ const mySwiper = new Swiper('.swiper-container', {
 		prevEl: '.swiper-button-prev',
 	},
 })
+
 
 // ! Tabs for team section
 document.querySelectorAll('.tabs-triggers__item').forEach((item) =>
@@ -69,3 +96,4 @@ document.querySelectorAll('.tabs-triggers__item').forEach((item) =>
 		document.getElementById(id).classList.add('member--active')
 	})
 );
+

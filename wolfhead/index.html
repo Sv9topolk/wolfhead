@@ -159,9 +159,14 @@
 
 		<!-- S3 half-background video -->
 		<div class="history__bg-video">
-			<video controls poster="./media/s3-video-poster.jpg">
+			<video controls id="video" poster="./media/s3-video-poster.jpg">
 				<source src="./media/s4-video.mp4" type="video/mp4">
 			</video>
+
+			<div class="controls">
+				<button id="play-pause-button" class="play"></button>
+				<p class="controls__name">Play video</p>
+			</div>
 		</div>
 
 		<!-- S3 half-background mobile version bgi -->
