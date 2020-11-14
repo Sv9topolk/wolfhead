@@ -83,6 +83,7 @@
 	}
 
 	&__item a {
+		position: relative;
 		display: block;
 		padding: 1rem 5px;
 		
@@ -91,10 +92,46 @@
 		font-weight: 600;
 		text-decoration: none;
 		color: $gold;
-
 		transition: 0.5s;
-		&:hover {
-			color: $sand;
+
+		&:hover {color: $sand;}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0.5rem;
+			left: 0;
+			z-index: -1;
+			width: 100%;
+			height: 3px;
+			background-color: $gold;
+			transform: scaleX(0);
+			transform-origin: right;
+			transition: transform 0.5s;
+		}
+
+		&:hover::before {
+			transform: scaleX(1);
+			transform-origin: left;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0.4rem;
+			left: 0;
+			z-index: -1;
+			width: 100%;
+			height: 3px;
+			background-color: $gold;
+			transform: scaleX(0);
+			transform-origin: left;
+			transition: transform 0.5s;
+		}
+
+		&:hover::after {
+			transform: scaleX(1);
+			transform-origin: right;
 		}
 	}
 }
