@@ -35,6 +35,8 @@
 	align-items: center;
 	padding-left: 2rem;
 	padding-right: 2rem;
+	color: inherit;
+	text-decoration: none;
 
 	&__image {
 		flex: 0 0 auto;
@@ -49,6 +51,7 @@
 		}
 	}
 	&__content {
+		display: block;
 		margin: 0;
 		font-size: 0.8rem;
 		line-height: 1.3rem;

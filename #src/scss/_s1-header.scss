@@ -65,7 +65,7 @@
 	position: absolute;
 	right: 0;
 	transform: translateX(100%);
-
+	opacity: 0;
 	transition-duration: 1s;
 	transition-timing-function: cubic-bezier(0.1, 0.8, 0.2, 1);
 
@@ -73,6 +73,7 @@
 	&--hide {
 		right: 55px;
 		transform: translateX(0);
+		opacity: 1;
 	}
 
 	&__list {
@@ -136,7 +137,6 @@
 	}
 }
 
-
 // ----- Burger menu styles -----
 .burger {
 	position: absolute;
@@ -193,7 +193,6 @@
 	}
 }
 
-
 // ----- Header content styles ------
 .head {
 	display: flex;
@@ -221,6 +220,7 @@
 		}
 	}
 }
+
 
 // ----- Mobile version -----
 @media all and (max-width: 768px) {
@@ -263,11 +263,11 @@
 			bottom: 0;
 			left: 50%;
 			display: block;
-			width: 80%;
+			width: 0;
 			border: 2px solid $gold;
 			border-radius: 5px;
 
-			transform: translateX(-50%) scaleX(0.1);
+			transform: translateX(-50%);
 			transition: 1s;
 			transition-timing-function: cubic-bezier(0.1, 0.8, 0.2, 1);
 		}
@@ -276,8 +276,11 @@
 			& a {color: $gold;}
 			&::after {
 				border-color: $bronze;
-				transform: translateX(-50%) scale(1);
+				width: 50%;
 			}
 		}
 	}
+
+	.menu__item a:before,
+	.menu__item a:after {display: none;}
 }
